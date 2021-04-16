@@ -7,7 +7,7 @@ patchesStrategicMerge:
     metadata:
       name: require-labels-demo
       annotations:
-        policies.kyverno.io/category: Policy Group Test
+        policies.kyverno.io/category: Best Practices
         policies.kyverno.io/description: >-
           Saqeeb's test for demo2 - Define and use labels that identify semantic attributes of your application or Deployment.
     spec:

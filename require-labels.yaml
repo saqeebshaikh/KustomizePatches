@@ -3,7 +3,7 @@ kind: ClusterPolicy
 metadata:
   name: require-labels-demo
   annotations:
-    policies.kyverno.io/category: Policy Group Test
+    policies.kyverno.io/category: Best Practices
     policies.kyverno.io/description: >-
       Define and use labels that identify semantic attributes of your application or Deployment.
       A common set of labels allows tools to work interoperably, describing objects in a common manner that
