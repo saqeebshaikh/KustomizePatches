@@ -1,0 +1,9 @@
+clusterPatches:
+- target:
+     kind: Cluster
+     name: saqeeb-006
+  kustomizePatch: ./cluster1/
+- target:
+     kind: Cluster
+     name: saqeeb-007
+  kustomizePatch: ./cluster2/

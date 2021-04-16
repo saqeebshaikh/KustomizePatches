@@ -1,0 +1,30 @@
+resources:
+- ../require-labels.yaml
+patchesStrategicMerge:
+- |-
+    apiVersion: kyverno.io/v1
+    kind: ClusterPolicy
+    metadata:
+      name: require-labels-demo
+      annotations:
+        policies.kyverno.io/category: Best Practices
+        policies.kyverno.io/description: >-
+          Saqeeb demo1 test - Define and use labels that identify semantic attributes of your application or Deployment.
+    spec:
+      validationFailureAction: enforce
+      rules:
+      - name: check-for-labels
+        match:
+          resources:
+            kinds:
+            - Pod
+        exclude:
+          resources:
+            namespaces:
+            - demo1
+        validate:
+          message: "The label `app.kubernetes.io/name` is required."
+          pattern:
+            metadata:
+              labels:
+                app.kubernetes.io/name: "?*"
