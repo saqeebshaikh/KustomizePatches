@@ -1,9 +1,9 @@
 clusterPatches:
 - target:
      kind: Cluster
-     name: saqeeb-006
+     name: sss-k008
   kustomizePatch: ./cluster1/
 - target:
      kind: Cluster
-     name: saqeeb-007
+     name: sss-t1-lap
   kustomizePatch: ./cluster2/
